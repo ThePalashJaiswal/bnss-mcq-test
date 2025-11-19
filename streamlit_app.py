@@ -272,7 +272,7 @@ This is a 15-question BNSS test with **negative marking**:
 
         if st.button("🔄 Reset Test"):
             reset_test()
-            st.experimental_rerun()
+            st.rerun()
 
     # ----------------------------
     # MAIN QUESTION PANEL
@@ -337,7 +337,7 @@ This is a 15-question BNSS test with **negative marking**:
                     "You are now barred from attempting further questions."
                 )
 
-            st.experimental_rerun()
+            st.rerun()
 
     # ----------------------------
     # NAVIGATION BUTTONS
@@ -347,12 +347,12 @@ This is a 15-question BNSS test with **negative marking**:
     with col1:
         if st.button("⬅️ Previous") and current_index > 0:
             st.session_state.current_q -= 1
-            st.experimental_rerun()
+            st.rerun()
 
     with col2:
         if st.button("Next ➡️") and current_index < TOTAL_QUESTIONS - 1:
             st.session_state.current_q += 1
-            st.experimental_rerun()
+            st.rerun()
 
     with col3:
         end_now = st.button("🏁 End Test & View Result")
